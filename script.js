@@ -1,18 +1,4 @@
-document.getElementById('saveContactBtn').addEventListener('click', function() {
-    // Replace with actual contact information
-    var contactInfo = {
-        firstName: 'Saurabh',
-        lastName: 'Balki',
-        organization: 'Example',
-        title: 'Example',
-        phone: '+91 5416486546',
-        email: 'example@gmail.com',
-        address: ';;Street; Area;State;Pin;Country',
-        website: 'example.com'
-    };
-
-    // Construct vCard content
-    var vCardData = 'BEGIN:VCARD\n' +
+var vCardData = 'BEGIN:VCARD\n' +
                     'VERSION:3.0\n' +
                     'FN:' + contactInfo.firstName + ' ' + contactInfo.lastName + '\n' +
                     'N:' + contactInfo.lastName + ';' + contactInfo.firstName + ';;;\n' +
@@ -72,4 +58,3 @@ document.getElementById('saveContactBtn').addEventListener('click', function() {
     // Inform the user to open the downloaded file and import it into Contacts app
     alert('Please open the downloaded vCard file and import it into your Contacts app.');
     window.open("example.com", "_blank");
-});
